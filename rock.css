@@ -3,14 +3,35 @@
   padding: 0;
   text-align: center;
 }
-h1 {
-    background-color: #081b31 ;
-    color: white;
-    height: 5rem;
-    line-height: 5rem;
 
-}
  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+h1 {
+  background: linear-gradient(to right, #00feba, #5b548a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  height: 5rem;
+  line-height: 5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+}
 .choice {
     height: 165px;
     width: 165px;
@@ -18,6 +39,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .choice:hover {
@@ -53,16 +76,37 @@ img {
   font-size: 4rem;
   font-weight: 50;
 }
-.msg_box {
-    margin-top: 5rem;
-}
-#msg {
-    
-    background-color: #081b31;
-    color: antiquewhite;
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
-    border: 2px,pink,solid;
 
+.msg_box {
+  margin-top: 5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05); /* subtle glass effect */
+  border: 2px solid rgba(255, 192, 203, 0.3); /* soft pink border */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.2); /* glowing effect */
+  backdrop-filter: blur(8px); /* frosted glass */
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+.msg_box:hover {
+  transform: scale(1.03);
+}
+
+#msg {
+  background: transparent;
+  font-size: 2rem;
+  color: #ffdee9;
+  padding: 1rem 2rem;
+  display: inline-block;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 192, 203, 0.5);
+}
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f5f5;
 }
